@@ -1,20 +1,66 @@
-Yii 2 Advanced Project Template
+Docolist for Hackaton July 2016
 ===============================
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+Team Member :
+Arvid, Firli, Edi
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+Framework Customize :
+- Pretty URL = On
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
+Example Vhost Setup :
+(from "Rewrite Engine on" is the code for your framework's direct route,
+so you dont have to add .htacess file anymore)
+C:\xampp\apache\conf\extra\httpd-vhosts.conf
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
+<VirtualHost *:8080> 
+ DocumentRoot "C:/xampp/htdocs/docolist/frontend/web"
+ ServerName docofront.local
+ 
+ <Directory "C:/xampp/htdocs/docolist/frontend/web">
+	# use mod_rewrite for pretty URL support
+       RewriteEngine on
+       # If a directory or a file exists, use the request directly
+       RewriteCond %{REQUEST_FILENAME} !-f
+       RewriteCond %{REQUEST_FILENAME} !-d
+       # Otherwise forward the request to index.php
+       RewriteRule . index.php
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
+       # use index.php as index file
+       DirectoryIndex index.php 
+
+  Options Indexes FollowSymLinks Includes ExecCGI
+  AllowOverride All
+  Order allow,deny
+  Allow from all
+ </Directory>
+</VirtualHost>
+
+
+Next adding the local vhost address to windows' driver :
+C:\Windows\System32\drivers\etc\hosts
+(edit it by runnning notepad as administrator)
+
+
+
+Local Database Setup :
+frontend\config\main-local.php
+
+add :
+'db' => [
+	'class' => 'yii\db\Connection',
+	'dsn' => 'mysql:host=localhost;dbname=docolist',
+	'username' => 'root',
+	'password' => '',
+	'charset' => 'utf8',
+]
+
+under $config->components
+
+make sure you already have database named : docolist
+
+next, type : yii migrate
+from your project folder, so it migrate the default database (tb : users, tb : migrate)
+
 
 DIRECTORY STRUCTURE
 -------------------
