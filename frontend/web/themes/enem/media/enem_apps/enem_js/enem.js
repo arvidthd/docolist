@@ -246,6 +246,57 @@ var enem = (function ($) {
             }
         });
     }
+	
+	var powerAlert = function(dataAlert) {
+		if(dataAlert) {
+			var enemTypeof = powerGetType(dataAlert).enemTypeof;
+			if(enemTypeof === 'object') {
+				if(dataAlert.status) {
+					if(dataAlert.messages) {
+						switch(dataAlert.status) {
+							case 0:
+								var enemAlertStatus = 'danger';
+							break;
+								
+							case 1:
+								var enemAlertStatus = 'success';
+							break;
+								
+							case 2:
+								var enemAlertStatus = 'info';
+							break;
+								
+							case 3:
+								var enemAlertStatus = 'warning';
+							break;
+								
+							default:
+								var enemAlertStatus = 'info';
+							break;
+						}
+						var enemTemplateAlert = '<div class="enem alert alert-'+ enemAlertStatus +' power-alert message-box">'+ dataAlert.messages +'</div>',
+							enemElAlert = $('[data-enem-power="powerAlert"]');
+						
+						enemElAlert.html(enemTemplateAlert);
+						setTimeout(function(){
+							enemElAlert.addClass('active');
+						},500);
+						setTimeout(function(){
+							enemElAlert.removeClass('active');
+						},5500);
+					} else {
+						console.error('Sorry, not found dataAlert messages');
+					}
+				} else {
+					console.error('Sorry, not found dataAlert status');
+				}
+			} else {
+				console.error('Data must be object. Your data is: ' + dataAlert);
+			}
+		} else {
+			console.error('Sorry, not found dataAlert');
+		}
+	}
 
 	return {
 		uhuy: uhuy,
@@ -257,6 +308,7 @@ var enem = (function ($) {
 		powerVex: powerVex,
 		powerModernizr: powerModernizr,
         powerAjaxRender: powerAjaxRender,
+		powerAlert: powerAlert,
 	};
 
 })(jQuery);

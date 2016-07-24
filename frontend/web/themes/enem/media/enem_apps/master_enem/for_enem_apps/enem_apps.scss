@@ -42,7 +42,7 @@
 		position: absolute;
 		width: 100%;
 //		top: 0px;
-		top: 0px;
+		top: -100%;
 		z-index: -5;
 		height: 50px;
 		@include transition(all ease-in-out 300ms);

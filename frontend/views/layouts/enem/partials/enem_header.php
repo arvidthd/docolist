@@ -246,11 +246,13 @@
             </ul>
         </div>
     </nav>
-    <div class="enem container-alert power-alert active">
+    <!-- Enem Power Alert -->
+    <div class="enem container-alert power-alert" data-enem-power="powerAlert">
         <div class="enem alert alert-danger power-alert message-box">
             Danger
         </div>
     </div>
+    <!-- End Enem Power Alert -->
 </header>
 <!-- Left side column. contains the logo and sidebar -->
 <!-- Left side column. contains the logo and sidebar -->

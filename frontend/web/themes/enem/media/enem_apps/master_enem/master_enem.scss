@@ -52,11 +52,19 @@
 /** ALTE Components **/
 @import "../../admin_lte/assets/css/AdminLTE.min";
 @import "../../admin_lte/assets/css/skins/_all-skins.min";
-@import "../../admin_lte/plugins/iCheck/flat/blue";
+//@import "../../admin_lte/plugins/iCheck/flat/blue";
+@import "../../admin_lte/plugins/iCheck/all";
+@import "../../admin_lte/plugins/colorpicker/bootstrap-colorpicker.min";
+@import "../../admin_lte/plugins/timepicker/bootstrap-timepicker.min";
+@import "../../admin_lte/plugins/select2/select2.min";
 @import "../../admin_lte/plugins/jvectormap/jquery-jvectormap-1.2.2";
 @import "../../admin_lte/plugins/datepicker/datepicker3";
 @import "../../admin_lte/plugins/daterangepicker/daterangepicker-bs3";
 @import "../../admin_lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min";
+@import "../../lib/fullcalendar/dist/fullcalendar";
+//@import "../../lib/fullcalendar/dist/fullcalendar.print";
+//@import "../../admin_lte/plugins/fullcalendar/fullcalendar.min";
+//@import "../../admin_lte/plugins/fullcalendar/fullcalendar.print";
 /*******************************/
 
 /** Enem Apps **/
