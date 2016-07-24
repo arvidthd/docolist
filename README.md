@@ -8,7 +8,10 @@ Arvid, Firli, Edi
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ddb2d2a07dc73f4869693f4b39c5eb74ce7ad2bf
 Project Desc :
 -------------------
 ```
@@ -37,6 +40,9 @@ Jadi di Dashboard General, kita bisa ngliat smua kegiatan member Docolist yang b
 ```
 
 
+<<<<<<< HEAD
+>>>>>>> ddb2d2a07dc73f4869693f4b39c5eb74ce7ad2bf
+=======
 >>>>>>> ddb2d2a07dc73f4869693f4b39c5eb74ce7ad2bf
 Framework Customize :
 -------------------

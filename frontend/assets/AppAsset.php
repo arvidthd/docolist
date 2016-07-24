@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
     public $js = [
         'themes/enem/media/js/vendor.min.js',
         // 'css/site.css',
+        // 'css/site.css',
     ];
     public $depends = [
         'yii\web\YiiAsset',
