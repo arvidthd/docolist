@@ -7,6 +7,37 @@ Team Member :
 Arvid, Firli, Edi
 ```
 
+<<<<<<< HEAD
+=======
+Project Desc :
+-------------------
+```
+Project Name :
+Docolist
+
+Desc :
+Semacam app To-do-list untuk member internal Docotel.
+
+Fungsi :
+Untuk memudahkan para member Docotel untuk melihat kegiatan member-member lainnya. 
+Contoh - Tanggal sekian, si A kemana, ngapain, sampai jam brapa
+App ini ditujukan terutama untuk para leaders, CTO dan PM (troops jg bisa).
+
+Detail :
+App ini berbasis account. Jadi nanti harus punya sign-in member dulu baru bisa masuk ke app ini.
+
+Stelah masuk, ada 2 tampilan, 
+1. Dashboard pribadi
+2. Dashboard general
+
+Di Dashboard pribadi, smua member di app ini bisa bikin "Todo" listnya masing-masing, bisa di set sifat kegiatannya ini "private" ato "public".
+Nah, nanti smua kegiatan yang di set "public" bakal digabungin dengan kgiatan member lain yg "public" juga dan ditampilin di Dashboard General.
+
+Jadi di Dashboard General, kita bisa ngliat smua kegiatan member Docolist yang bersifat "public".
+```
+
+
+>>>>>>> ddb2d2a07dc73f4869693f4b39c5eb74ce7ad2bf
 Framework Customize :
 -------------------
 ```
