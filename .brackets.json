@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/xampp/htdocs/hcktn/docolist/frontend/web/themes/enem/media/assets/bootstrap-timepicker/js/bootstrap-timepicker.js",
+        "moment.js",
+        "datatables.js"
+    ]
+}

@@ -87,6 +87,7 @@ class DocolistController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
+            $this->layout = 'enem/enem_signin_layouts';
             return $this->render('signin', [
                 'model' => $model,
             ]);
@@ -98,6 +99,18 @@ class DocolistController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionCalendar()
+    {
+        return $this->render('calendar');
+        // Yii::$app->getResponse()->redirect('site/login');
+    }
+
+    public function actionForms()
+    {
+        return $this->render('forms');
+        // Yii::$app->getResponse()->redirect('site/login');
     }
 
     /**
